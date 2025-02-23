@@ -2,11 +2,12 @@
 int main()
 {
     unsigned int a;
+    printf("Enter an integer: ");
     scanf("%u", &a);
 
-    unsigned int b = num & (1 << (sizeof(unsigned int) * 8 - 1));
+    unsigned int msb = a & (1 << (sizeof(unsigned int) * 8 - 1));
 
-    if (b)
+    if (msb)
     {
         printf("Set");
     }
@@ -14,5 +15,6 @@ int main()
     {
         printf("Not Set");
     }
+
     return 0;
 }
