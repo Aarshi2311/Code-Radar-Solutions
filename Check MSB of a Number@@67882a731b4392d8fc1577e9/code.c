@@ -3,7 +3,7 @@ int main()
 {
     unsigned int a;
     printf("Enter an integer: ");
-    scanf("%u", &num);
+    scanf("%u", &a);
 
     unsigned int b = num & (1 << (sizeof(unsigned int) * 8 - 1));
 
