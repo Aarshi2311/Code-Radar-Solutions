@@ -2,14 +2,19 @@
 int main()
 {
     unsigned int a;
-    scanf("%u",&a);
-    unsigned int b = a & ( 1 & (sizeof(unsigned int)*8-1));
+    printf("Enter an integer: ");
+    scanf("%u", &num);
+
+    unsigned int b = num & (1 << (sizeof(unsigned int) * 8 - 1));
+
     if (b)
     {
-        printf("Set");
+        printf("The Most Significant Bit of %u is 1\n", num);
     }
     else
     {
-        printf("Not Set");
+        printf("The Most Significant Bit of %u is 0\n", num);
     }
+
+    return 0;
 }
